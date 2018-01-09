@@ -1,6 +1,6 @@
 body {
 	background-attachment: fixed;
-	background-image: url("../img/body-bg.jpg");
+	background-image: url("/../img/body-bg.jpg");
 	background-position: top center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -13,9 +13,9 @@ body {
 		width: 100%;
 		height: 100%;
 		position: fixed;
-		background-image: -moz-linear-gradient( 0deg, rgb(230,101,135) 0%, rgb(240,148,88) 100%);
-		background-image: -webkit-linear-gradient( 0deg, rgb(230,101,135) 0%, rgb(240,148,88) 100%);
-		background-image: -ms-linear-gradient( 0deg, rgb(230,101,135) 0%, rgb(240,148,88) 100%);
+		background-image: -moz-linear-gradient( 0deg, rgb(101, 152, 230) 0%, rgb(240,148,88) 100%);
+		background-image: -webkit-linear-gradient( 0deg, rgb(98, 154, 241) 0%, rgb(255, 255, 255) 100%);
+		background-image: -ms-linear-gradient( 0deg, rgb(101, 152, 230) 0%, rgb(240,148,88) 100%);
 		opacity: 0.6;
 		z-index: -1;
 	}
@@ -49,9 +49,9 @@ body {
 	}
 }
 .p1-gradient-bg {
-	background-image: -moz-linear-gradient( 0deg, rgb(230,101,135) 0%, rgb(240,148,88) 100%);
-	background-image: -webkit-linear-gradient( 0deg, rgb(230,101,135) 0%, rgb(240,148,88) 100%);
-	background-image: -ms-linear-gradient( 0deg, rgb(230,101,135) 0%, rgb(240,148,88) 100%);
+	background-image: -moz-linear-gradient( 0deg, rgb(44, 145, 238) 0%, rgb(154, 246, 127) 100%);
+	background-image: -webkit-linear-gradient( 0deg, rgb(44, 145, 238) 0%, rgb(154, 246, 127) 100%);
+	background-image: -ms-linear-gradient( 0deg, rgb(44, 145, 238) 0%, rgb(154, 246, 127) 100%);
 }
 .p1-gradient-color {
 	background: -webkit-linear-gradient(0deg, #e66587, #f09458);
@@ -263,7 +263,7 @@ body {
 		@include flexbox();
 		@include justify-content(center);
 		position: relative;
-		
+
 		&:after {
 			content: "";
 			top: 50%;
@@ -307,7 +307,7 @@ body {
 		right: 0;
 		width: 50%;
 		height: 100%;
-		background: url(../img/story-bg.jpg) no-repeat center center/cover;
+		background: url(/../img/story-bg.jpg) no-repeat center center/cover;
 		z-index: 1;
 		@include media-breakpoint-down(md) {
 			display: none;

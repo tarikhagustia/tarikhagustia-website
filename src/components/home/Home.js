@@ -7,6 +7,8 @@ import Others from '../sections/Others.js';
 import Footer from '../sections/Footer.js';
 
 
+import './../../scss/main.scss';
+
 class Home extends Component {
    render() {
       return (
@@ -15,7 +17,7 @@ class Home extends Component {
             <Header/>
             <Featured/>
             <Services/>
-          </div> 
+          </div>
 
           <div className="main-wrapper">
             <Works/>
