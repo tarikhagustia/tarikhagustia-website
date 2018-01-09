@@ -113,7 +113,9 @@ module.exports = {
           /\.(js|jsx)(\?.*)?$/,
           /\.css$/,
           /\.json$/,
-          /\.svg$/
+          /\.svg$/,
+          /\.sass$/,
+          /\.scss$/
         ],
         loader: 'url',
         query: {
@@ -140,39 +142,20 @@ module.exports = {
       // In production, we use a plugin to extract that CSS to a file, but
       // in development "style" loader enables hot editing of CSS.
       {
+        test: /\.css$/,
+        loader: 'style!css?importLoaders=1!postcss'
+      },
+
+      {
+        test: /\.sass$/,
+        include: paths.appSrc,
+        loaders: ["style", "css", "sass"]
+      },
+
+      {
         test: /\.scss$/,
-        use: [
-          {
-            loader: require.resolve('style-loader'),
-          },
-          {
-            loader: require.resolve('css-loader'),
-            options: {
-              importLoaders: 1,
-            }
-          },
-          {
-            loader: require.resolve('sass-loader'),
-          },
-          {
-            loader: require.resolve('postcss-loader'),
-            options: {
-              ident: 'postcss',
-              plugins: () => [
-                require('postcss-flexbugs-fixes'),
-                autoprefixer({
-                  browsers: [
-                    '>1%',
-                    'last 4 versions',
-                    'Firefox ESR',
-                    'not ie < 9',
-                  ],
-                  flexbox: 'no-2009',
-                }),
-              ],
-            },
-          },
-        ]
+        include: paths.appSrc,
+        loaders: ["style", "css", "sass"]
       },
       // JSON is not enabled by default in Webpack but both Node and Browserify
       // allow it implicitly so we also enable it.
